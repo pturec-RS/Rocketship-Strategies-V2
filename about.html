@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Rocketship Strategies</title>
+  <meta name="description" content="Meet Paul Turec, President & CEO of Rocketship Strategies. 20+ years of experience in SaaS, Fintech, Payments and Logistics with ex-Mastercard, Avalara and AvidXchange." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | Rocketship Strategies" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rocketshipstrategies.com/about-us" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Rocket_Favcon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* Page hero */
+    .page-hero {
+      height: 320px;
+      background-image: url('images/Banner.png');
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-top: var(--nav-h);
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 46, 0.65);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--white);
+    }
+    .page-hero-content h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+    .page-hero-content .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    /* Pull quote at top */
+    .about-quote {
+      background: var(--offwhite);
+      padding: 56px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--lightgray);
+    }
+    .about-quote blockquote p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-style: italic;
+      color: var(--charcoal);
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Bio section */
+    .about-bio {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .bio-photo-col {
+      position: sticky;
+      top: calc(var(--nav-h) + 32px);
+    }
+
+    .bio-photo {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      display: block;
+    }
+
+    .bio-photo-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .bio-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .bio-linkedin:hover { color: var(--dark); }
+    .bio-linkedin svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* Bio text */
+    .bio-text h2 {
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .bio-text .bio-title {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .bio-text p {
+      font-size: 0.97rem;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    /* Experience / Education cols */
+    .bio-credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 36px;
+      padding-top: 36px;
+      border-top: 1px solid var(--lightgray);
+    }
+
+    .cred-block h3 {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cred-block ul {
+      list-style: none;
+      padding: 0;
+    }
+    .cred-block ul li {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.6;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--lightgray);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .cred-block ul li:last-child { border-bottom: none; }
+    .cred-block ul li::before {
+      content: '›';
+      color: var(--red);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Company logos */
+    .logos-section {
+      background: var(--offwhite);
+      padding: 56px 48px;
+      text-align: center;
+      border-top: 1px solid var(--lightgray);
+    }
+    .logos-section h3 {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      font-weight: 600;
+      margin-bottom: 36px;
+    }
+    .logos-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .logos-row img {
+      height: 36px;
+      width: auto;
+      opacity: 0.65;
+      filter: grayscale(100%);
+      transition: opacity 0.2s, filter 0.2s;
+    }
+    .logos-row img:hover {
+      opacity: 1;
+      filter: none;
+    }
+
+    /* Contact button */
+    .bio-cta {
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .about-bio {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 24px;
+      }
+      .bio-photo-col { position: static; }
+      .bio-photo { max-width: 320px; margin: 0 auto; }
+      .bio-credentials { grid-template-columns: 1fr; }
+      .about-quote { padding: 40px 24px; }
+      .logos-section { padding: 40px 24px; }
+      .logos-row img { height: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================
+       NAVIGATION
+       ==================================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Rocketship Strategies home">
+      <img src="images/RSLogo_Transparent.png" alt="Rocketship Strategies" />
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="news.html">News &amp; Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ====================================================
+       PAGE HERO
+       ==================================================== -->
+  <section class="page-hero" aria-label="About Us header">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/Banner.png" aria-hidden="true">
+    <source src="images/vecteezy_space-shuttle-takes-off-into-space-elements-of-this-image_8302906.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-video-overlay"></div>
+  <div class="page-hero-content">
+    <h1>About Us</h1>
+  </div>
+</section>
+
+
+  <!-- ====================================================
+       PULL QUOTE
+       ==================================================== -->
+  <div class="about-quote fade-in">
+    <blockquote>
+      <p>"When building a business, your most important resources are capital and time. A poor investment in the earlier can be remedied with a course correction and losses reversed. Squandering time whether it's because of a delayed decision, miscalculation or bad planning is a resource you can never get back."</p>
+    </blockquote>
+  </div>
+
+
+  <!-- ====================================================
+       BIO
+       ==================================================== -->
+  <main>
+    <div class="about-bio">
+
+      <!-- Photo column -->
+      <div class="bio-photo-col fade-in">
+        <img
+          src="images/Paul Color 2.jpg"
+          alt="Paul Turec, President & CEO of Rocketship Strategies"
+          class="bio-photo"
+          onerror="this.style.background='#e8e8e8'; this.style.minHeight='420px';"
+        />
+        <div class="bio-photo-actions">
+          <a href="mailto:paul.turec@rocketshipstrategies.com" class="btn btn-red" style="font-size:12px; padding: 10px 24px;">Contact Paul</a>
+          <a href="https://www.linkedin.com/in/paulturec/" target="_blank" rel="noopener" class="bio-linkedin" aria-label="Paul Turec on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Bio text column -->
+      <div class="bio-text fade-in">
+        <h2>Paul Turec</h2>
+        <p class="bio-title">President &amp; CEO</p>
+
+        <p>Paul launched Rocketship Strategies to help early and mid-stage companies gain access to high-performing Sales, Channel and Marketing leadership to help them scale and grow without having to make the commitment of the time, money and effort required to invest in industry veterans at this stage in their careers to join their business.</p>
+
+        <p>With deep experience in SaaS, Fintech, Payments and Logistics, leading multiple Sales, Channel and revenue growth strategies domestically and internationally for over two-decades, Paul was able to take advantage of riding the growth rocketship at multiple companies who went IPO or were later acquired by larger, public companies due to their explosive growth.</p>
+
+        <p>He brings critical experience and a wealth of knowledge necessary to help founders and leadership teams build their own rocketships capable of achieving any heights their businesses and dreams can take them.</p>
+
+        <div class="bio-credentials">
+          <div class="cred-block">
+            <h3>Experience</h3>
+            <ul>
+              <li>Ex-Mastercard, Avalara and AvidXchange</li>
+              <li>SVP, Sales</li>
+              <li>Sr. Director Global Business Operations</li>
+              <li>Director, Business Development</li>
+              <li>Director, Indirect &amp; Partner Sales</li>
+            </ul>
+          </div>
+          <div class="cred-block">
+            <h3>Education</h3>
+            <ul>
+              <li>MBA, University of Kansas</li>
+              <li>BS, Journalism, Marketing &amp; Mass Communications, University of Kansas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Company logos -->
+    <div class="logos-section fade-in">
+        <div class="logos-row">
+        <img src="images/Mastercard.png"         alt="Mastercard" />
+        <img src="images/avalara.png"             alt="Avalara" />
+        <img src="images/avidxchange.png"         alt="AvidXchange" />
+        <img src="images/edenred.png"             alt="Edenred" />
+        <img src="images/freightquote-logo.png"   alt="Freightquote by C.H. Robinson" />
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ====================================================
+       LET'S TALK CTA
+       ==================================================== -->
+  <section class="cta-section" id="contact">
+    <h2 class="fade-in">Let's Talk</h2>
+    <p class="cta-tagline fade-in">
+      <span>Learn.</span> <span>Grow.</span> <span>Succeed.</span>
+    </p>
+    <p class="fade-in" style="opacity:0.7; margin-bottom: 36px; font-size:0.95rem;">Talk to one of our experts today.</p>
+
+    <div class="cta-contact-info fade-in">
+      <div>
+        <p class="cta-label">Email</p>
+        <a href="mailto:ContactUs@rocketshipstrategies.com">ContactUs@rocketshipstrategies.com</a>
+      </div>
+      <div>
+        <p class="cta-label">Phone</p>
+        <a href="tel:9134859913">913.485.9913</a>
+      </div>
+    </div>
+
+    <form
+      id="contact-form"
+      class="cta-form fade-in"
+      action="https://formspree.io/f/mbdvgkqy"
+      method="POST"
+    >
+      <input type="text"  name="name"    placeholder="Your Name"    required />
+      <input type="email" name="email"   placeholder="Your Email"   required />
+      <input type="text"  name="subject" placeholder="Subject" />
+      <textarea           name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-red">Send Message</button>
+    </form>
+
+    <p class="form-success" id="form-success">
+      Thanks for contacting us. A member of the team will respond shortly.
+    </p>
+
+    <div class="fade-in" style="margin-top: 32px;">
+      <a href="https://www.linkedin.com/company/rocketship-strategies" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.5); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer class="site-footer">
+    <p>©2026 by Rocketship Strategies</p>
+    <div class="footer-linkedin">
+      <a href="https://www.linkedin.com/company/rocketship-strategies" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

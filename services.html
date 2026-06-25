@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Rocketship Strategies</title>
+  <meta name="description" content="Fractional CRO, Channel Leadership, Revenue Strategies, Marketing & Branding, and Business Operations services for early and mid-stage companies." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services | Rocketship Strategies" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rocketshipstrategies.com/services" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Rocket_Favcon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* Page hero — shorter than homepage */
+    .page-hero {
+      height: 320px;
+      background-image: url('images/Banner.png');
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-top: var(--nav-h);
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 46, 0.65);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--white);
+    }
+    .page-hero-content h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+    .page-hero-content .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    /* Services detail */
+    .services-detail {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 48px;
+    }
+
+    .service-block {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 36px;
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--lightgray);
+    }
+    .service-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .service-num {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--red);
+      opacity: 0.18;
+      line-height: 1;
+      padding-top: 4px;
+      text-align: right;
+    }
+
+    .service-body h2 {
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .service-body .service-subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .service-body p {
+      font-size: 0.97rem;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .service-body p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 600px) {
+      .service-block {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .service-num {
+        font-size: 2rem;
+        text-align: left;
+        opacity: 0.25;
+      }
+      .services-detail { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================
+       NAVIGATION
+       ==================================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Rocketship Strategies home">
+      <img src="images/RSLogo_Transparent.png" alt="Rocketship Strategies" />
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="news.html">News &amp; Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ====================================================
+       PAGE HERO
+       ==================================================== -->
+  <section class="page-hero" aria-label="Services header">
+  <video class="hero-video" autoplay muted loop playsinline poster="images/Banner.png" aria-hidden="true">
+    <source src="images/vecteezy_space-shuttle-takes-off-into-space-elements-of-this-image_8302906.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-video-overlay"></div>
+  <div class="page-hero-content">
+   <h1>Our Services</h1>
+  </div>
+</section>
+
+
+  <!-- ====================================================
+       SERVICES DETAIL
+       ==================================================== -->
+  <main>
+    <div class="services-detail">
+
+      <div class="section-divider fade-in" style="margin-bottom: 56px;">
+        <img src="images/Rocket_Transparent.png" alt="" aria-hidden="true" />
+      </div>
+
+      <!-- 01 Fractional CRO -->
+      <div class="service-block fade-in">
+        <div class="service-num">01</div>
+        <div class="service-body">
+          <h2>Fractional CRO</h2>
+          <p class="service-subtitle">Accelerating Sales and Sales Team Effectiveness</p>
+          <p>Hiring full-time sales leaders can be expensive, time consuming and don't always guarantee results. Fractional CROs help early and mid-stage companies focus on what they do best: building a business, managing resources and focusing on the customer experience.</p>
+          <p>A fractional CRO enhances a business by providing strategic leadership for sales teams, offers expert coaching and mentoring to develop team effectiveness, design comprehensive sales plans, and ensure adherence to best practices. They can oversee training, manage KPIs, and make critical decisions regarding headcount. Utilizing a fractional CRO drives growth and efficiency, ultimately steering the company towards achieving its sales objectives and overall business goals all at a lower investment in time and resources, comparative to a full-time hire who, let's face it, may or may not be the right choice.</p>
+        </div>
+      </div>
+
+      <!-- 02 Fractional Channel Leadership -->
+      <div class="service-block fade-in">
+        <div class="service-num">02</div>
+        <div class="service-body">
+          <h2>Fractional Channel Leadership</h2>
+          <p class="service-subtitle">Executing With Partners To Get Results</p>
+          <p>For growth-focused companies, channel partnerships offer an efficient and cost-effective way to rapidly scale revenue through expanding or reaching new markets. Perhaps you've already realized that channels need to be a part of your lead gen mix and revenue strategy, but you're not seeing the results.</p>
+          <p>Experienced, fractional channel leadership is a cost-efficient strategy to develop this crucial revenue muscle where one is underperforming or doesn't exist. Fractional channel leaders can lead a team of existing alliance reps, help you hire new ones and build an execution plan to make your channel efforts more effective. You can achieve all these results without the expense and risk of bringing in a full-time senior leader to develop a plan of attack for this important part of your revenue growth plan allowing you to focus your resources on other, core areas of the business.</p>
+        </div>
+      </div>
+
+      <!-- 03 Revenue & Channel Strategies -->
+      <div class="service-block fade-in">
+        <div class="service-num">03</div>
+        <div class="service-body">
+          <h2>Revenue &amp; Channel Strategies</h2>
+          <p class="service-subtitle">Establishing Effective Revenue Producing Strategies</p>
+          <p>Channel partnerships don't happen on their own or develop overnight. It takes a repeatable strategy, effective tactics, relationships in the industry and dedication to a win-win relationship where both sides achieve positive outcomes. The same can be said for your front-line sales strategy.</p>
+          <p>Investing in veteran, fractional leaders in revenue and channels will make your investment in these areas even more profitable. These leaders help you build out training and development plans, outline repeatable strategies to make these teams more effective as well as coaching and mentoring current sales and channel leaders to super-charge results.</p>
+        </div>
+      </div>
+
+      <!-- 04 Marketing & Branding -->
+      <div class="service-block fade-in">
+        <div class="service-num">04</div>
+        <div class="service-body">
+          <h2>Marketing &amp; Branding</h2>
+          <p class="service-subtitle">Marketing Strategy That Drives Sales Results</p>
+          <p>Marketing and branding are vital for any business to create visibility for your message, build a memorable brand and attract the right customers. A strong brand establishes your business's identity, helping it stand out in a crowded market while effective marketing strategies drive customer engagement and generate leads, crucial for growth and sustainability. Investing in marketing and branding can significantly accelerate your business's growth trajectory.</p>
+          <p>Experienced, fractional leadership in these areas can help set your business up for success due to their long track record in doing the same for companies and brands across the globe. By analyzing ICPs, building out metrics to track effective campaigns and getting the most out of every dollar invested in this area are essential for building a strong foundation to set your business apart from competitors, and laying the groundwork for long-term success.</p>
+        </div>
+      </div>
+
+      <!-- 05 Business Operations -->
+      <div class="service-block fade-in">
+        <div class="service-num">05</div>
+        <div class="service-body">
+          <h2>Business Operations</h2>
+          <p class="service-subtitle">Operate More Effectively In All Areas of the Business</p>
+          <p>For some companies, growth can bring chaos and misalignment at the very time when they need to be hitting on all cylinders the most. Poor sales-to-service hand-offs, delayed implementation for customers and dysfunction across business units can stall a growing business just as it's getting off the launch pad.</p>
+          <p>A fractional executive with experience in leading large-scale, matrixed organizations can help a business of any size re-evaluate their operations, cross-functional processes and ensure customers are experiencing the best a business has to offer. Building a product and selling it is only half the battle. Ensuring an ideal customer experience after the sale, getting ahead of friction across departments and identifying areas for improvement to take advantage of growth opportunities early are vital to on-going success and growth.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ====================================================
+       LET'S TALK CTA
+       ==================================================== -->
+  <section class="cta-section" id="contact">
+    <h2 class="fade-in">Let's Talk</h2>
+    <p class="cta-tagline fade-in">
+      <span>Learn.</span> <span>Grow.</span> <span>Succeed.</span>
+    </p>
+    <p class="fade-in" style="opacity:0.7; margin-bottom: 36px; font-size:0.95rem;">Talk to one of our experts today.</p>
+
+    <div class="cta-contact-info fade-in">
+      <div>
+        <p class="cta-label">Email</p>
+        <a href="mailto:ContactUs@rocketshipstrategies.com">ContactUs@rocketshipstrategies.com</a>
+      </div>
+      <div>
+        <p class="cta-label">Phone</p>
+        <a href="tel:9134859913">913.485.9913</a>
+      </div>
+    </div>
+
+    <form
+      id="contact-form"
+      class="cta-form fade-in"
+      action="https://formspree.io/f/mbdvgkqy"
+      method="POST"
+    >
+      <input type="text"  name="name"    placeholder="Your Name"    required />
+      <input type="email" name="email"   placeholder="Your Email"   required />
+      <input type="text"  name="subject" placeholder="Subject" />
+      <textarea           name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-red">Send Message</button>
+    </form>
+
+    <p class="form-success" id="form-success">
+      Thanks for contacting us. A member of the team will respond shortly.
+    </p>
+
+    <div class="fade-in" style="margin-top: 32px;">
+      <a href="https://www.linkedin.com/company/rocketship-strategies" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.5); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer class="site-footer">
+    <p>©2026 by Rocketship Strategies</p>
+    <div class="footer-linkedin">
+      <a href="https://www.linkedin.com/company/rocketship-strategies" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
